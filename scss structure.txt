@@ -1,0 +1,51 @@
+Recommended Sass Structure
+
+Keep the Sass system small. A file should have one clear job. When a file starts doing several jobs, split it.
+
+The main file is the map. The smaller files hold the work.
+
+src/scss/
+  application.scss          Main entry point. Load the Sass files here.
+
+  base/
+    _index.scss             Forwards the base files.
+    _reset.scss             Browser reset and default element rules.
+    _typography.scss        Fonts, headings, paragraphs, and text styles.
+    _base.scss              Shared rules for html, body, links, and images.
+
+  abstracts/
+    _index.scss             Forwards the shared tools.
+    _variables.scss         Colors, spacing, sizes, and other project values.
+    _mixins.scss            Small Sass patterns used more than once.
+    _functions.scss         Sass functions that return a value.
+
+  layout/
+    _index.scss             Forwards the layout files.
+    _header.scss            Header and navigation layout.
+    _footer.scss            Footer layout.
+    _grid.scss              Containers, rows, columns, and page sections.
+
+  components/
+    _index.scss             Forwards the reusable interface pieces.
+    _button.scss            Button styles.
+    _card.scss              Card styles.
+    _modal.scss             Modal styles.
+
+Start with the files already in `base/`. Add `abstracts/`, `layout/`, or `components/` only when the project needs them. Empty folders do not make a project better.
+
+The entry point can look like this:
+
+```scss
+@use 'abstracts' as *;
+@use 'base' as *;
+@use 'layout' as *;
+@use 'components' as *;
+```
+
+If a folder does not exist yet, do not add its `@use` line. The entry point should describe the files that are actually present.
+
+Use partial filenames that begin with an underscore. Sass will not create a separate CSS file for a partial. The entry point gathers the partials and Gulp writes the finished stylesheet.
+
+Good rule: one file, one responsibility. Keep colors and spacing in variables. Keep repeated patterns in mixins. Keep page structure in layout files. Keep the styles for one reusable object together.
+
+Do not split a file just to create more files. Split it when the smaller pieces become easier to find, read, and change.

@@ -1,0 +1,162 @@
+/* =========================
+   Google Fonts
+========================= */
+
+// Define font weights
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+// Montserrat - all weights & italics
+$montserrat-family: "Montserrat", sans-serif;
+
+@each $weight in $font-weights {
+    .montserrat-#{$weight} {
+        font-family: $montserrat-family;
+        font-optical-sizing: auto;
+        font-weight: $weight;
+        font-style: normal;
+    }
+
+    .montserrat-#{$weight}-italic {
+        font-family: $montserrat-family;
+        font-optical-sizing: auto;
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+// Barlow - all weights & italics
+$barlow-family: "Barlow", sans-serif;
+
+@each $weight,
+$name in (100: "thin", 200: "extralight", 300: "light", 400: "regular", 500: "medium", 600: "semibold", 700: "bold", 800: "extrabold", 900: "black") {
+    .barlow-#{$name} {
+        font-family: $barlow-family;
+        font-weight: $weight;
+        font-style: normal;
+    }
+
+    .barlow-#{$name}-italic {
+        font-family: $barlow-family;
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+// Space Grotesk - all weights & italics
+$space-grotesk-family: "Space Grotesk", sans-serif;
+
+@each $weight in $font-weights {
+    .space-grotesk-#{$weight} {
+        font-family: $space-grotesk-family;
+        font-optical-sizing: auto;
+        font-weight: $weight;
+        font-style: normal;
+    }
+
+    .space-grotesk-#{$weight}-italic {
+        font-family: $space-grotesk-family;
+        font-optical-sizing: auto;
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+// Merriweather - all weights & italics
+$merriweather-family: "Merriweather", serif;
+
+@each $weight,
+$name in (100: "thin", 200: "extralight", 300: "light", 400: "regular", 500: "medium", 600: "semibold", 700: "bold", 800: "extrabold", 900: "black") {
+    .merriweather-#{$name} {
+        font-family: $merriweather-family;
+        font-weight: $weight;
+        font-style: normal;
+    }
+
+    .merriweather-#{$name}-italic {
+        font-family: $merriweather-family;
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+$brand-font: 'Space Grotesk', sans-serif;
+$body-font: 'Merriweather', serif;
+$example-font: 'Montserrat', sans-serif;
+$utility-font: 'Barlow', sans-serif;
+
+$primary-font: $example-font;
+$secondary-font: $utility-font;
+
+/* =========================
+   Clamp Fonts
+========================= */
+
+$h1-font: clamp(3rem, 2.5385rem + 2.0513vw, 4rem);
+$h2-font: clamp(2.4rem, 2.1231rem + 1.2308vw, 3rem);
+$h3-font: clamp(2.1rem, 1.9154rem + 0.8205vw, 2.5rem);
+$h4-font: clamp(1.8rem, 1.7077rem + 0.4103vw, 2rem);
+$h5-font: clamp(1.6rem, 1.5308rem + 0.3077vw, 1.75rem);
+$h6-font: clamp(1.4rem, 1.3538rem + 0.2051vw, 1.5rem);
+$h7-font: clamp(1.2rem, 1.1769rem + 0.1026vw, 1.25rem);
+$p-font:  clamp(1rem, 0.8846rem + 0.5128vw, 1.25rem);
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    font-family: $brand-font;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: $h1-font;
+}
+
+h2 {
+    font-size: $h2-font;
+}
+
+h3 {
+    font-size: $h3-font;
+}
+
+h4 {
+    font-size: $h4-font;
+}
+
+h5 {
+    font-size: $h5-font;
+}
+
+h6 {
+    font-size: $h6-font;
+}
+
+h7 {
+    font-size: $h7-font;
+}
+
+p {
+    font-family: $body-font;
+    font-size: $p-font;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Utility typography roles */
+.example-text {
+    font-family: $example-font;
+}
+
+.utility-text {
+    font-family: $utility-font;
+}

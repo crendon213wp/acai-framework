@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="container py-3">
+
+        <!-- Brand -->
+        <a class="navbar-brand ms-4 ms-sm-0" href="index.html">
+            Acai Framework
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#navbarOffcanvas"
+                aria-controls="navbarOffcanvas"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end text-bg-dark"
+             tabindex="-1"
+             id="navbarOffcanvas"
+             aria-labelledby="navbarOffcanvasLabel">
+
+
+            <!-- Offcanvas Header -->
+            <div class="offcanvas-header">
+
+                <h5 class="offcanvas-title" id="navbarOffcanvasLabel">
+                    Acai Framework
+                </h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- Nav Links -->
+            <div class="offcanvas-body justify-content-end">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a href="#"
+                           class="nav-link
+                            @@if(typeof active !== 'undefined' && (active === 'Link 1' || active === 'docs')){btn-light active}
+                            @@if(typeof active === 'undefined' || (active !== 'Link 1' && active !== 'docs')){btn-outline-light}">
+                                Link 1
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#"
+                        class="nav-link
+                            @@if(typeof active !== 'undefined' && active === 'Link 2'){btn-light active}
+                            @@if(typeof active === 'undefined' || active !== 'Link 2'){btn-outline-light}">
+                                Link 2
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#"
+                        class="nav-link
+                            @@if(typeof active !== 'undefined' && active === 'Link 3'){btn-light active}
+                            @@if(typeof active === 'undefined' || active !== 'Link 3'){btn-outline-light}">
+                                Link 3
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="#"
+                        class="nav-link
+                            @@if(typeof active !== 'undefined' && active === 'Link 4'){btn-light active}
+                            @@if(typeof active === 'undefined' || active !== 'Link 4'){btn-outline-light}">
+                                Link 4
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>

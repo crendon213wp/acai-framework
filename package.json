@@ -1,0 +1,28 @@
+{
+  "name": "Acai-framework",
+  "version": "1.0.0",
+  "description": "Acai Framework is a lightweight, CDN-first frontend build pipeline for rapid HTML/CSS/JS mockups.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sitemap": "^8.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.97.3"
+  }
+}

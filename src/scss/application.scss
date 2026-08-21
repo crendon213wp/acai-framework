@@ -1,0 +1,18 @@
+@use 'base' as *;
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    font-size: 100%;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
