@@ -75,8 +75,8 @@ $p-font: clamp(1rem, 0.8846rem + 0.5128vw, 1.25rem);
 Clone the repository and install its dependencies:
 
 ```bash
-git clone https://github.com/crendon213wp/frontend-starter.git
-cd frontend-starter
+git clone https://github.com/crendon213wp/acai-framework.git
+cd acai-framework
 npm install
 ```
 
