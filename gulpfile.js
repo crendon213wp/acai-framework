@@ -39,7 +39,11 @@ function html() {
     ])
         .pipe(fileinclude({
             prefix: '@@',
-            basepath: '@file'
+            basepath: '@file',
+            context: {
+                site: site.site,
+                og: site.og
+            }
         }))
         .pipe(htmlmin({
             collapseWhitespace: true,

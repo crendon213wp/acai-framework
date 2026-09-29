@@ -1,17 +1,27 @@
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>@@title | Acai Framework</title>
-
-    @@include('head/meta.html')
+    <title>@@title | @@description</title>
+    
+    @@include('head/meta.html', {
+        "title": "@@title",
+        "description": "@@description",
+        "pageUrl": "@@pageUrl"
+    })
 
     @@include('head/favicon.html')
 
-    @@include('head/opengraph.html')
+    @@include('head/opengraph.html', {
+        "title": "@@title",
+        "description": "@@description",
+        "pageUrl": "@@pageUrl"
+    })
 
-    @@include('head/twitter-cards.html')
+    @@include('head/twitter-cards.html', {
+        "title": "@@title",
+        "description": "@@description"
+    })
 
     @@include('head/fonts.html')
 
