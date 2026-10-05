@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp"
+    "build": "gulp build"
   },
   "engines": {
     "node": ">=20.19.0"

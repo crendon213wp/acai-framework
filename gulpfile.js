@@ -22,6 +22,16 @@ const paths = {
     dist: 'dist'
 };
 
+const buildPipeline = series(
+    clean,
+    html,
+    styles,
+    scripts,
+    images,
+    robots,
+    sitemap
+);
+
 // ------------------------
 // Clean dist
 // ------------------------
@@ -42,7 +52,7 @@ function html() {
             basepath: '@file',
             context: {
                 site: site.site,
-                og: site.og
+                og: site.og || {}
             }
         }))
         .pipe(htmlmin({
@@ -143,16 +153,11 @@ function watcher() {
 }
 
 // ------------------------
-// Default
+// Exports
 // ------------------------
+exports.build = buildPipeline;
 exports.default = series(
-    clean,
-    html,
-    styles,
-    scripts,
-    images,
-    robots,
-    sitemap,
+    buildPipeline,
     serve,
     watcher
 );
